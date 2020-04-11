@@ -1,0 +1,116 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Indie Flower', cursive;
+    background-color: #E0E0E2;
+}
+
+.nav-container {
+    height: 6.25rem;
+    display: flex;
+    background-color: #41658A;
+    color: #E0E0E2;
+}
+
+.logo-hamburger-wrapper {
+    display: flex;
+    align-items: center;
+    flex: initial;
+    padding: 1em;
+    font-size: 2rem;
+}
+
+.links-wrapper {
+    flex: auto;
+    display: flex;
+    align-items: center;
+}
+
+.left-links-wrapper {
+    height: 100%;
+    flex: initial;
+    display: flex;
+    align-items: center;
+    /* Only bring this in if you want some space between the two links */
+    /* width: 175px;
+    justify-content: space-between; */
+}
+
+.right-links-wrapper {
+    height: 100%;
+    flex: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link {
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    background-color: #7389AE;
+}
+
+.link:hover {
+    background-color: #81D2C7;
+    cursor: pointer;
+}
+
+.link a {
+    color: #E0E0E2;
+    text-decoration: none;
+}
+
+#hamburger {
+    color: #E0E0E2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .links-wrapper {
+        display: none;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .left-links-wrapper {
+        width: 100%;
+        display: block;
+    }
+    
+    .right-links-wrapper {
+        width: 100%;
+        display: block;
+    }
+
+    .link {
+        justify-content: center;
+    }
+
+    #hamburger {
+        display: flex;
+    }
+    
+    .active {
+        display: block;
+    }
+}
